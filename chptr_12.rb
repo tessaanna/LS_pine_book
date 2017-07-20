@@ -26,3 +26,24 @@ eric_age = right_now - erics_bday
 eric_age_years = eric_age/year
 
 puts eric_age_years
+
+
+puts ""
+puts "Question 12.6 first bullet"
+puts "Give me a roman numeral"
+numeral = gets.chomp
+
+numeral = numeral.to_s.upcase
+numeral_array = numeral.split('')
+
+numeral_array.each  do |x|
+  if x == 'I' || x == 'V' || x == 'X' || x == 'L' || x == 'C' || x == 'D' || x == 'M'
+    print '.'
+  else
+    puts "please only use roman numerals: IVXLCDM"
+    exit
+  end
+end
+
+puts ""
+puts "Question 12.6 second bullet"
