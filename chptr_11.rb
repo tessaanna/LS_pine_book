@@ -23,7 +23,7 @@ puts "Not done with this one - need to understand what he did"
 
 puts "Question - Build your own playlist"
 
-filename = 'playlist.txt'
+filename = 'playlist.m3u'
 music_files = Dir['**/*.mp3' ]
 
 File.open filename, 'w' do |f|
