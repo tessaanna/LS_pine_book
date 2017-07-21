@@ -41,9 +41,41 @@ numeral_array.each  do |x|
     print '.'
   else
     puts "please only use roman numerals: IVXLCDM"
-    exit
+    break
   end
 end
 
 puts ""
 puts "Question 12.6 second bullet"
+
+birthdays_hash = {}
+birthdays = File.read('chptr_12_2.txt')
+birthdays.each_line do |x|
+  name_bday = x.split(', ')
+  names = name_bday[0]
+  bday_month_combined = name_bday[1].split(' ')
+  bday_month = bday_month_combined[0].to_s
+  bday_day = bday_month_combined[1].to_s
+  bday_year = name_bday[2]
+  official_bday = Time.local(bday_year, bday_month, bday_day)
+  birthdays_hash[names] = official_bday
+end
+
+puts birthdays_hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
